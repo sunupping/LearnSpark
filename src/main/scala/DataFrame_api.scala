@@ -10,7 +10,7 @@ object DataFrame_api {
     val spark = SparkSession
       .builder()
       .appName("Spark SQL basic example")
-        .master("local")
+      .master("local")
       .getOrCreate()
 
 //    val sc = spark.sparkContext

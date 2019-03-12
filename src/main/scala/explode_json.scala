@@ -11,8 +11,8 @@ object explode_json {
 
   def main(args: Array[String]): Unit = {
     val spark = SparkSession.builder().appName("explode_json").master("local").getOrCreate()
-    val jsonPath = " file:///explode_json/people_Array.json"
-//    val jsonPath = "D:\\scala\\people_Array.json"
+//    val jsonPath = " file:///explode_json/people_Array.json"
+    val jsonPath = "D:\\scala\\people_Array.json"
     val df = spark.read.json(jsonPath)
     df.show()
     df.printSchema()
